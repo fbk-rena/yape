@@ -59,3 +59,6 @@ typings/
 
 # databases
 data/users/*
+
+.sass-cache
+
