@@ -11,41 +11,45 @@
 </head>
 
 <body>
-    <main id="carrusel">
-        <div class="carousel carousel-slider">
-            <a class="carousel-item" href="#one!">
-                <div class="img-contenedor">
-                    <img src="/public/img/icons/icon-people.png">
-                </div>
-            </a>
-            <a class="carousel-item" href="#two!">
-                <div class="img-contenedor">
-                    <img src="img/icons/happy-person.png">
-                </div>
-            </a>
-            <a class="carousel-item" href="#three!">
-                <div class="img-contenedor">
-                    <img src="img/icons/group-people.png">
-                </div>
-            </a>
-        </div>
-        <div class="carousel carousel-slider center" data-indicators="true">
-            <div class="carousel-item" href="#one!">
-                <h2>Paga a tus amigos</h2>
-                <p class="">Paga a quien quieras desde dode quieras, sin usar efectivo</p>
+    <main>
+        <section class="container">
+            <div class="slider">
+                <ul class="slides">
+                    <li class="row">
+                        <div class="col s8">
+                        <img src="img/icons/icon-people.png">
+                        </div>
+                        <div>
+                            <h3>Paga a tus amigos</h3>
+                            <p>Paga a quien quieras desde dode quieras, sin usar efectivo</p>
+                        </div>
+                    </li >
+                    <li class="row">
+                        <div class="col s8">
+                        <img src="img/icons/happy-person.png"></div>
+                        <div>
+                            <h3>Sin numero de cuenta</h3>
+                            <p>Elige a quien pagar desde tu lista de contactos</p>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="col s8">
+                            <div class="col s7">
+                                <img src="img/icons/group-people.png">
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Gratis y seguro</h3>
+                            <p class="">La transferencia es inmediat y gratuita de una cuenta a otra</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="carousel-item" href="#two!">
-                <h2>Sin numero de cuenta</h2>
-                <p class="">Elige a quien pagar desde tu lista de contactos</p>
-            </div>
-            <div class="carousel-item" href="#three!">
-                <h2>Gratis y seguro</h2>
-                <p class="">La transferencia es inmediat y gratuita de una cuenta a otra</p>
-            </div>
-        </div>
+        </section>
+
         <div class="carousel-fixed-item center">
-                <a class="btn white-text --amarillo-boton" href="views/registro.html">REGISTRAME</a>
-            </div>
+            <a class="btn white-text --amarillo-boton" href="views/registro.html">REGISTRAME</a>
+        </div>
     </main>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

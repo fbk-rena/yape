@@ -1,9 +1,12 @@
 var api = {
-    url: "localhost:3000/registerNumber"
+    url: "localhost:3000/api/registerNumber"
 }
 var cargarPagina = function () {
-     $('.carousel.carousel-slider').carousel({fullWidth: true});
-        
+     $('.slider').slider();
+}
+
+var terminoscheck = function (){
+    
 }
 
 $(document).ready(cargarPagina);

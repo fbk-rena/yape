@@ -14,22 +14,29 @@ Morado dark : #38052a
     padding: 0;
 }
 
-.img-contenedor {
-    width: 50vw;
-    img {
-        width: 100%;
+div.slider{
+    height: 85vh;
+    slides{
+        height: 85vh;
     }
 }
 
+.slider{
+    height: 85vh !important;
+    .slides{
+        height: 85vh !important;
+        background-color: transparent;
+        li{
+            div{
+                max-width: 100%;
+            }
+        }
+    }  
+} 
 .--amarillo-boton {
     background: #fbd43b;
 }
 
-.carousel {
-    .indicators {
-        .indicator-item.active {
-            background-color: #f64552;
-        }
-    }
-}
+
+//.carousel.carousel-slider.center.initialized
 
