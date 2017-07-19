@@ -9,24 +9,32 @@ Morado - Entrada de n├║meros : #49233b
 Morado light : #451e36
 Morado dark : #38052a
 */
+@media (min-width: 1024px) {
+  .slider .slides li img {
+    max-width: 25vw; } }
 * {
   margin: 0 auto;
   padding: 0; }
 
-div.slider {
-  height: 85vh; }
-  div.slider slides {
-    height: 85vh; }
-
 .slider {
-  height: 85vh !important; }
+  color: #212121;
+  height: 75vh !important;
+  margin-top: 5vh; }
   .slider .slides {
-    height: 85vh !important;
+    height: 75vh !important;
     background-color: transparent; }
-    .slider .slides li div {
-      max-width: 100%; }
+    .slider .slides li {
+      padding: 5vw; }
+      .slider .slides li img {
+        max-height: 50vh;
+        height: 100%; }
+  .slider .indicators .indicator-item.active {
+    background: #f8f8f8; }
+  .slider .indicators .indicator-item.active {
+    background: #f64552; }
 
 .--amarillo-boton {
+  margin-top: 1.5vh;
   background: #fbd43b; }
 
 /*# sourceMappingURL=main.css.map */
