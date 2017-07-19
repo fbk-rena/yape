@@ -1,14 +1,3 @@
-/*Rojo - bullet : #f64552
-Gris - bullet : #f8f8f8
-Amarillo - botones : #fbd43b
-Gris dark : #212121
-Gris - letra soft : #8f8f8f
-Turquesa - Términos y condiciones: #00c3a3
-Morado - Entrada de números : #49233b
-Morado light : #451e36
-Morado dark : #38052a
-*/
-
 @import '_variables';
 @import '_break';
 
@@ -71,8 +60,16 @@ Morado dark : #38052a
     @extend .registro
 }
 #success{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     background: $Amarillo;
+    img{
+        max-width: 40vw;
+    }
+    
 }
 
 

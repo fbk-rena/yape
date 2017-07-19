@@ -1,14 +1,3 @@
-@charset "UTF-8";
-/*Rojo - bullet : #f64552
-Gris - bullet : #f8f8f8
-Amarillo - botones : #fbd43b
-Gris dark : #212121
-Gris - letra soft : #8f8f8f
-Turquesa - T├®rminos y condiciones: #00c3a3
-Morado - Entrada de n├║meros : #49233b
-Morado light : #451e36
-Morado dark : #38052a
-*/
 @media (min-width: 1024px) {
   .slider .slides li img {
     max-width: 25vw; } }
@@ -51,7 +40,13 @@ Morado dark : #38052a
   border-bottom: none; }
 
 #success {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   background: #fbd43b; }
+  #success img {
+    max-width: 40vw; }
 
 /*# sourceMappingURL=main.css.map */
