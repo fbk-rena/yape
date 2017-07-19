@@ -1,17 +1,38 @@
 var api = {
     url: "localhost:3000/api/registerNumber"
 }
+var $telefono = $('#phone').val;
 var cargarPagina = function () {
-     $('.slider').slider();
-    $('input#phone').characterCounter();
-    terminoscheck();
+    $('.slider').slider();
+    validarRegistro();
 }
+/*$.post(api.url,{
+    phone: $telefono,
+    terms: true
+}).then(function(response){
+    console.log(response);
+}).catch(function(error){
+    console.log(error);
+});
+*/
+var validarRegistro = function () {
+    ($telefono).change(function(){
+         var checked = true;
 
-var terminoscheck = function (){
-    if ($("#phone").val.length == 10){
+    if ($telefono.length > 10) {
+        checked = false;
         console.log('contando');
-        $("#continuar").removeClass( "disabled" );
     }
+    if ($telefono.length < 10) {
+        checked = false;
+    }
+    if (!$("#terms").checked) {
+        checked = false;
+    }
+    
+    return checked;
+    }
+    ); 
 }
 
 $(document).ready(cargarPagina);

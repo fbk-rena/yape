@@ -45,7 +45,7 @@ Morado dark : #38052a
     margin-top: 1.5vh;
     background: #fbd43b;
 }
-//Registro
+//views
 .registro{
     padding: 3vw;
     margin-top: 7vh;
@@ -59,10 +59,21 @@ Morado dark : #38052a
         color: $letraGrisSoft;
     }
 }
-#formulario{
+.formulario{
     input{
         border-bottom: none;
     }
 }
+.codigo{
+    @extend .registro
+}
+.usuario{
+    @extend .registro
+}
+#success{
+    height: 100vh;
+    background: $Amarillo;
+}
+
 
 //.carousel.carousel-slider.center.initialized
