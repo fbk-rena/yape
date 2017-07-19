@@ -60,5 +60,5 @@ typings/
 # databases
 api/users/*
 
-.sass-cache
+.sass-cache/
 
