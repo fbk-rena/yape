@@ -16,7 +16,7 @@ Morado dark : #38052a
     margin: 0 auto;
     padding: 0;
 }
-
+//Index
 .slider {
     color: $letraGrisDark;
     height: 75vh !important;
@@ -41,10 +41,28 @@ Morado dark : #38052a
         }
     }
 }
-
 .--amarillo-boton {
     margin-top: 1.5vh;
     background: #fbd43b;
+}
+//Registro
+.registro{
+    padding: 3vw;
+    margin-top: 7vh;
+    img{
+        max-height: 25vw;
+    }
+    h5{
+        color: $letraGrisDark;
+    }
+    h6{
+        color: $letraGrisSoft;
+    }
+}
+#formulario{
+    input{
+        border-bottom: none;
+    }
 }
 
 //.carousel.carousel-slider.center.initialized

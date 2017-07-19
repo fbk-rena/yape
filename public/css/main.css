@@ -37,4 +37,17 @@ Morado dark : #38052a
   margin-top: 1.5vh;
   background: #fbd43b; }
 
+.registro {
+  padding: 3vw;
+  margin-top: 7vh; }
+  .registro img {
+    max-height: 25vw; }
+  .registro h5 {
+    color: #212121; }
+  .registro h6 {
+    color: #8f8f8f; }
+
+#formulario input {
+  border-bottom: none; }
+
 /*# sourceMappingURL=main.css.map */
