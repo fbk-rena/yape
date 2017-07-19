@@ -12,31 +12,28 @@
 
 <body>
     <main>
-        <div class="container registro center">
+        <div class="container codigo center">
             <div class="row center">
-                <img src="/img/icons/phone.png" alt="phone">
+                <img src="/img/icons/message.png" alt="phone">
                 <div>
-                    <h5>Para comenzar validemos tu numero</h5>
-                    <h6>Recibiras un SMS con un codigo de validacion</h6>
+                    <h5>Ahora ingresa tu codigo</h5>
+                    <h6> Enviaremos un SMS con el codigo de validacion al numero <span id="numTelefono"></span></h6>
                 </div>
             </div>
             <div class="row">
                 <form class="formulario">
                     <div class="row">
                         <div class="input-field col s12">
-                            <img class="col s3" src="/img/icons/phoneandnumber.png">
-                            <input id="phone" type="number" class=" col  s8 validate" placeholder="Numero de telefono">
+                            <img class="col s3" src="/img/icons/lock.png">
+                            <input id="phone" type="number" class=" col  s8 validate" placeholder="- - - - -">
                         </div>
                         <hr>
                     </div>
                     <div class="row">
-                        <p>
-                            <input name="group1" type="checkbox" id="terms" class="filled-in"/>
-                            <label for="terms">Acepto los <a href="">Términos y condiciones</a></label>
-                        </p>
-                    </div>
-                    <div>
-                        <a id="continuar" class="btn disabled">Continuar</a>
+                        <span> Reintentar en 
+                            <img src="/img/icons/clock.png" alt="">
+                            segundos
+                        </span>
                     </div>
                 </form>
             </div>
