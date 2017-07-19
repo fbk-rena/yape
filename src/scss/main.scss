@@ -9,34 +9,60 @@ Morado light : #451e36
 Morado dark : #38052a
 */
 
+@import '_variables';
+@import '_break';
+
 * {
     margin: 0 auto;
     padding: 0;
 }
-
-div.slider{
-    height: 85vh;
-    slides{
-        height: 85vh;
+//Index
+.slider {
+    color: $letraGrisDark;
+    height: 75vh !important;
+    margin-top: 5vh;
+    .slides {
+        height: 75vh !important;
+        background-color: transparent;
+        li {
+            padding: 5vw;
+            img {
+                max-height: 50vh;
+                height: 100%;
+            }
+        }
+    }
+    .indicators {
+        .indicator-item.active {
+            background: $Gris;
+        }
+        .indicator-item.active {
+            background: $Rojo;
+        }
+    }
+}
+.--amarillo-boton {
+    margin-top: 1.5vh;
+    background: #fbd43b;
+}
+//Registro
+.registro{
+    padding: 3vw;
+    margin-top: 7vh;
+    img{
+        max-height: 25vw;
+    }
+    h5{
+        color: $letraGrisDark;
+    }
+    h6{
+        color: $letraGrisSoft;
+    }
+}
+#formulario{
+    input{
+        border-bottom: none;
     }
 }
 
-.slider{
-    height: 85vh !important;
-    .slides{
-        height: 85vh !important;
-        background-color: transparent;
-        li{
-            div{
-                max-width: 100%;
-            }
-        }
-    }  
-} 
-.--amarillo-boton {
-    background: #fbd43b;
-}
-
-
 //.carousel.carousel-slider.center.initialized
-

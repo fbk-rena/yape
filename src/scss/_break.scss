@@ -1,0 +1,12 @@
+    $desktop: "(min-width: 1024px)";
+@media #{$desktop} {
+    .slider {
+        .slides {
+            li {
+                img {
+                    max-width: 25vw;
+                }
+            }
+        }
+    }
+}
