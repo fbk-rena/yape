@@ -17,23 +17,23 @@
                 <img src="/img/icons/message.png" alt="phone">
                 <div>
                     <h5>Ahora ingresa tu codigo</h5>
-                    <h6> Enviaremos un SMS con el codigo de validacion al numero <span id="numTelefono"></span></h6>
+                    <h6> Enviaremos un SMS con el codigo de validacion al numero <span id="numSms"></span></h6>
                 </div>
             </div>
             <div class="row">
                 <form class="formulario">
                     <div class="row">
                         <div class="input-field col s12">
-                            <img class="col s3" src="/img/icons/lock.png">
+                            <img class="col s2 offset-s1" src="/img/icons/lock.png">
                             <input id="code" type="text" class=" col  s8 validate solo-num" placeholder="- - - - -" maxlength="6">
                         </div>
                         <hr>
                     </div>
                     <div class="row">
-                        <span> Reintentar en 
-                            <img src="/img/icons/clock.png" alt="">
-                            segundos
-                        </span>
+                      <h6 class="col s5">Reintentar en</h6>
+                      <span class="col s2" id="segundos" ></span>
+                      <img class="col s2 responsive-img" src="/img/icons/clock.png" alt="">
+                      <h6 class="col s2">segundos</h6>
                     </div>
                 </form>
             </div>
