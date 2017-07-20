@@ -1,41 +1,50 @@
 var api = {
-    url: "localhost:3000/api/registerNumber"
+    url: "http://localhost:3000/api/registerNumber"
 }
-var $telefono = $('#phone').val;
+//expresion para validar mail
+var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+
 var cargarPagina = function () {
     $('.slider').slider();
+    soloNumeros();
     validarRegistro();
 }
-/*$.post(api.url,{
-    phone: $telefono,
-    terms: true
-}).then(function(response){
-    console.log(response);
-}).catch(function(error){
-    console.log(error);
-});
-*/
-var validarRegistro = function () {
-    ($telefono).change(function(){
-         var checked = true;
 
-    if ($telefono.length > 10) {
-        checked = false;
-        console.log('contando');
-    }
-    if ($telefono.length < 10) {
-        checked = false;
-    }
-    if (!$("#terms").checked) {
-        checked = false;
-    }
-    
-    return checked;
-    }
-      if(checked = true){
-        { $('continuar').removeClass('disabled')}
-    }                 
-    ); 
+var soloNumeros = function () {
+    $(".solo-num").keyup(function () {
+        this.value = this.value.replace(/[^0-9\.]/g, '');
+    });
+};
+var telefonoIngresado = function(){
+    $("#phone").keyup(function () {
+        if ($(this).val().length === 10) {
+            $("#terms").removeAttr("disabled");
+        } else {
+            $("#terms").attr("disabled", "disabled");
+        };
+    });
+};
+var checkbox = function (){
+     $('#terms').click(function () {
+        if ($(this).is(':checked')) {
+            $('#continuar').removeClass('disabled');
+        } else {
+            $('#continuar').addClass('disabled');
+        }
+        registraNum();  
+    });
+};
+var registraNum = function () {
+    $.post(api.url, {
+        "phone": $("#phone").val(),
+        "terms": true
+    },  function (response){
+        console.log(response);
+    });
+};
+var validarRegistro = function () {
+    telefonoIngresado();
+    checkbox();
 }
 
 $(document).ready(cargarPagina);
