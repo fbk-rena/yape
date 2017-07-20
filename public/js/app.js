@@ -32,6 +32,9 @@ var validarRegistro = function () {
     
     return checked;
     }
+      if(checked = true){
+        { $('continuar').removeClass('disabled')}
+    }                 
     ); 
 }
 
