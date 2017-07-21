@@ -69,7 +69,6 @@ var registraNum = function () {
 var validarRegistro = function () {
     telefonoIngresado();
     checkbox();
-    console.log(localStorage.getItem("codigo"))
 }
 //Funciones pagina Codigo
 
