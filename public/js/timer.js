@@ -4,7 +4,6 @@ var api = {
     user: "http://localhost:3000/api/createUser",
     card: "http://localhost:3000/api/registerCard"
 }
-var checkCode = $("#code").val();
 var tiempo = 21;
 
 var contador = function () {
@@ -12,7 +11,7 @@ var contador = function () {
     verificarCodigo();
 }
 var verificarCodigo = function () {
-    console.log(sessionStorage.getItem("codigo"))
+    //console.log(sessionStorage.getItem("codigo"))
     $("#code").keyup(function () {
         if ($(this).val().length === sessionStorage.getItem("codigo").length) {
             $("#btn-verificar").removeClass('hidden');
@@ -21,7 +20,7 @@ var verificarCodigo = function () {
     });
 };
 var compararCodigos =  function (){
-    if (checkCode == sessionStorage.getItem("codigo")) {
+    if ($("#code").val() === sessionStorage.getItem("codigo")) {
                 window.location.href = "http://localhost:3000/views/ususrio.html"
             } else {
                 countdown();
