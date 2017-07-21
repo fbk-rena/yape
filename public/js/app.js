@@ -12,7 +12,6 @@ var cargarPagina = function () {
     soloNumeros();
     validarRegistro();
     $('.modal').modal();
-    $('#numSms').val(sessionStorage.getItem("numRes"));
     verificarCodigo();
 }
 
@@ -24,7 +23,8 @@ var soloNumeros = function () {
 //Funciones pagina Registro
 var telefonoIngresado = function () {
     $("#phone").keyup(function () {
-        if ($(this).val().length === 10) {
+        if ($(this).val().length === 10 ) {
+            
             $("#terms").removeAttr("disabled");
         } else {
             $("#terms").attr("disabled", "disabled");
@@ -46,12 +46,12 @@ var registraNum = function () {
         "phone": $("#phone").val(),
         "terms": true
     }, function (response) {
-        console.log(response.success);
+        /*console.log(response.success);
         if (response.success == false) {
             Materialize.toast('El número ya existe!', 2500);
             $("#phone").val("");
             $("#terms").attr("disabled", "disabled");
-            $("#terms").prop("not(:checked)");
+            $('#terms').attr('checked', false);
             $('#continuar').addClass('disabled');
             
         } else {
@@ -59,45 +59,22 @@ var registraNum = function () {
         var numero = response.data.phone;
         console.log(numero);*/
             sessionStorage.setItem("numRes", response.data.phone);
-            sessionStorage.setItem("codeInicial", response.data.code);
+            sessionStorage.setItem("codigo", response.data.code);
             console.log(sessionStorage.getItem("numRes"));
             console.log(sessionStorage.getItem("codeInicial"));
-            $('#codeModal').text(sessionStorage.getItem("codeInicial"));
+            $('#codeModal').text(sessionStorage.getItem("codigo"));
         }
-    });
+    );
 };
 var validarRegistro = function () {
     telefonoIngresado();
     checkbox();
-    console.log(localStorage.getItem("codeInicial"))
+    console.log(localStorage.getItem("codigo"))
 }
 //Funciones pagina Codigo
-var nuevoCodigo = function () {
-    $.post(api.newCode, {
-        "phone": sessionStorage.getItem("numRes"),
-    }, function (response) {})
-};
-var verificarCodigo = function () {
-    if ($("#code").val() == sessionStorage.getItem("codeInicial")) {
-        window.location.href = "http://localhost:3000/views/ususrio.html"
-    } else {
-        countdown();
-    }
-};
-var countdown = function () {
-    console.log("esto se va a descontrolar");
-}
-var timer = function () {
-    var tiempo = 21;
 
-    $('#segundos').val(tiempo);
+   
 
-    if (tiempo != 0) {
-        tiempo--
-    } else {
-        nuevoCodigo();
-    }
-}
 
 
 

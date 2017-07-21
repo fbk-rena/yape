@@ -30,14 +30,16 @@
         }
     }
 }
-
+.hidden{
+    display:none;
+}
 .--amarillo-boton {
     margin-top: 1.5vh;
     background: #fbd43b;
 }
 
 //views
-span {
+span, #numSms, #codeModalNew, #codeModal   {
     color: $numMorado;
 }
 
