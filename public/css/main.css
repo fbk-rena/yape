@@ -22,9 +22,18 @@
   .slider .indicators .indicator-item.active {
     background: #f64552; }
 
+.hidden {
+  display: none; }
+
 .--amarillo-boton {
   margin-top: 1.5vh;
   background: #fbd43b; }
+
+span, #numSms, #codeModalNew, #codeModal {
+  color: #49233b; }
+
+h6 {
+  color: #8f8f8f; }
 
 .registro, .codigo, .usuario {
   padding: 3vw;
@@ -33,8 +42,6 @@
     max-height: 25vw; }
   .registro h5, .codigo h5, .usuario h5 {
     color: #212121; }
-  .registro h6, .codigo h6, .usuario h6 {
-    color: #8f8f8f; }
 
 .formulario input {
   border-bottom: none; }

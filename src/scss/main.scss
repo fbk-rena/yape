@@ -1,10 +1,10 @@
 @import '_variables';
 @import '_break';
-
 * {
     margin: 0 auto;
     padding: 0;
 }
+
 //Index
 .slider {
     color: $letraGrisDark;
@@ -30,47 +30,58 @@
         }
     }
 }
+.hidden{
+    display:none;
+}
 .--amarillo-boton {
     margin-top: 1.5vh;
     background: #fbd43b;
 }
+
 //views
-.registro{
+span, #numSms, #codeModalNew, #codeModal   {
+    color: $numMorado;
+}
+
+h6 {
+    color: $letraGrisSoft;
+}
+
+.registro {
     padding: 3vw;
     margin-top: 7vh;
-    img{
+    img {
         max-height: 25vw;
     }
-    h5{
+    h5 {
         color: $letraGrisDark;
     }
-    h6{
-        color: $letraGrisSoft;
-    }
 }
-.formulario{
-    input{
+
+.formulario {
+    input {
         border-bottom: none;
     }
 }
-.codigo{
+
+.codigo {
     @extend .registro
 }
-.usuario{
+
+.usuario {
     @extend .registro
 }
-#success{
+
+#success {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     background: $Amarillo;
-    img{
+    img {
         max-width: 40vw;
     }
-    
 }
-
 
 //.carousel.carousel-slider.center.initialized
